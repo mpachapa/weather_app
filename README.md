@@ -8,6 +8,6 @@ You can check out this API at: [Open Weather API](https://openweathermap.org/api
 
 ---
 ## The Website
-Here is a link to this website: 
+Here is a link to this website: [https://mpachapa.github.io/weather_app/](https://mpachapa.github.io/weather_app/)
 
 ---
