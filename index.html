@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Weather App</title>
+  </head>
+
+  <main class="pan-top">
+    <div>
+      <h1>Welcome to my weather app</h1>
+      <br />
+
+      <!-- Current Date -->
+      <div class="currentDate" style="font-size: 35px"></div>
+      <!-- DIV - USER INPUT SEARCH -->
+      <form class="search">
+        <input type="text" class="search-bar" placeholder="Enter a Zip Code" />
+        <button class="button">Submit</button>
+      </form>
+      <hr />
+      <br />
+
+      <div class="weather">
+        <div class="citydate">
+          <h2 class="city"></h2>
+          <div class="date"></div>
+        </div>
+
+        <div class="conditionIconInfo">
+          <div class="currentTemp"><p></p></div>
+          <img
+            src="http://openweathermap.org/img/wn/04d.png"
+            class="conditionIcons"
+          />
+        </div>
+        <div class="info"></div>
+        <hr />
+        <div class="hilo">
+          <div class="tempHi"><p></p></div>
+          <div class="tempLo"><p></p></div>
+        </div>
+        <div class="other">
+          <div class="feels_like"><p></p></div>
+          <div class="humidity"><p></p></div>
+        </div>
+        <div class="windSpeed"><p></p></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>Created by Matthew Pachapa &copy2022</footer>
+</html>
