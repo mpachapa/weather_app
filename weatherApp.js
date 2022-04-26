@@ -80,7 +80,9 @@ const today = new Date();
 const [day, month, date, year, hour, minute] = [today.getDay(), today.toLocaleString("default", {month: "long"}), today.getDate(), today.getFullYear(), today.getHours(), today.getMinutes()];
 const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 function formatTime () {
-    if (hour === 0) {
+    if (minute < 10){
+        mintute = `0${minute}`
+    }else if (hour === 0) {
         return `12:${minute} AM`
     } else if (hour < 12) {
         return `${hour}:${minute} AM`
