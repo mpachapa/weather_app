@@ -17,8 +17,8 @@
       <div class="currentDate" style="font-size: 35px"></div>
       <!-- DIV - USER INPUT SEARCH -->
       <form class="search">
-        <input type="text" class="search-bar" placeholder="Enter a Zip Code" />
-        <button class="button">Submit</button>
+        <input type="text" id="search_bar" placeholder="Enter a Zip Code"/>
+        <button id="button">Submit</button>
       </form>
       <hr />
       <br />
@@ -35,12 +35,14 @@
             src="http://openweathermap.org/img/wn/04d.png"
             class="conditionIcons"
           />
+          <div class="conditions"><p></p></div>
         </div>
         <div class="info"></div>
         <hr />
         <div class="hilo">
-          <div class="tempHi"><p></p></div>
-          <div class="tempLo"><p></p></div>
+          <div class="tempHigh"><p></p></div>
+          <div class="tempLow"><p></p></div>
+          
         </div>
         <div class="other">
           <div class="feels_like"><p></p></div>
@@ -50,6 +52,6 @@
       </div>
     </div>
   </main>
-
+  <script src="weatherApp.js"></script>
   <footer>Created by Matthew Pachapa &copy2022</footer>
 </html>

@@ -51,11 +51,14 @@ footer {
 }
 
 .currentTemp {
-  font-size: 70px;
+  font-size: 63px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.condition {
-  padding-top: 3%;
+.conditions {
+  font-size: 63px;
   display: flex;
   flex-direction: column;
   align-items: center;
