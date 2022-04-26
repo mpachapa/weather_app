@@ -4,7 +4,9 @@ const weatherApp = {
     APIkey: "0c14922c58d92686a9cb9945060e539f",
     //Grabs the zipcode from the HTML page
     searchZip: function () {
+        console.log(document.querySelector("#search_bar").value)
         this.getCoordinates(document.querySelector("#search_bar").value)
+        
     },
     //Calls the geoAPI to get the coordinates of the searched zip code
     getCoordinates: function (zip) {
@@ -34,9 +36,26 @@ const weatherApp = {
     }
 
 }
+//Display current day, date and time
+const today = new Date();
+const [day, month, date, year, hour, minute] = [today.getDay(), today.toLocaleString("default", {month: "long"}), today.getDate(), today.getFullYear(), today.getHours(), today.getMinutes()];
+const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+function formatTime () {
+    if (hour === 0) {
+        return `12:${minute} AM`
+    } else if (hour <= 12) {
+        return `${hour}:${minute} AM`
+    } else if (hour > 12) {
+        let hourpm = hour - 12;
+        return `${hourpm}:${minute} PM`
+    }
+}
+document.querySelector(".currentDate").innerHTML = `on ${weekdays[day]}, ${month} ${date}, ${year} at ${formatTime()}`;
+
 
 //Event Listeners to make function calls
-document.querySelector("#search_bar").addEventListener("keyup", function (event) {if (event.key == "Enter") {weather.searchZip();}})
+document.querySelector("#button").addEventListener("click", function () {weatherApp.searchZip()});
+document.querySelector("#search_bar").addEventListener("keyup", function (event) {if (event.key == "Enter") {weatherApp.searchZip();}})
 
 
 // console.log(weatherApp.getCoordinates(29412))
