@@ -50,7 +50,7 @@ function formatTime () {
         return `${hourpm}:${minute} PM`
     }
 }
-document.querySelector(".currentDate").innerHTML = `on ${weekdays[day]}, ${month} ${date}, ${year} at ${formatTime()}`;
+document.querySelector(".currentDate").innerHTML = `${weekdays[day]}, ${month} ${date}, ${year} at ${formatTime()}`;
 
 
 //Event Listeners to make function calls
