@@ -12,50 +12,47 @@
     <div>
       <h1>Welcome to my weather app</h1>
       <br />
-
-      <!-- Current Date -->
-      <div class="currentDate" style="font-size: 35px"></div>
+      <h3>Please enter a US zip code</h3>
       <!-- DIV - USER INPUT SEARCH -->
       <div class="search">
         <input type="text" id="search_bar" placeholder="Enter a Zip Code" />
         <button id="button">Submit</button>
       </div>
       <hr />
-      <br />
 
       <div class="weather">
         <div class="citydate">
-          <h2 class="city"></h2>
-          <div class="date"></div>
+          <h1 class="city"></h1>
+          <!-- Current Date -->
+          <div class="currentDate" style="font-size: 35px"></div>
         </div>
-
+        <!-- Current Conditions and Temperature -->
         <div class="conditionIconInfo">
           <div class="currentTemp"><p></p></div>
-          <img
-            src=""
-            class="conditionIcons"
-          />
+          <img src="" class="conditionIcons" />
           <div class="conditions"><p></p></div>
         </div>
-        <div class="info"></div>
+        <br />
         <hr />
-        <div class="hilo">
-          <h2>Temperatures</h2>
-          <div class="feels_like"><p></p></div>
-          <div class="tempHigh"><p></p></div>
-          <div class="tempLow"><p></p></div>
-        </div>
-        <div class="other">
-          <h2>Other Data Points:</h2>
-          <div class="humidity"><p></p></div>
-          <div class="pressure"><p></p></div>
-          <div class="visibility"><p></p></div>
-          <div class="windSpeed"><p></p></div>
-          <div class="windDirection"><p></p></div>
+        <div class="info">
+          <div class="temps">
+            <h2>Temperatures</h2>
+            <div class="feels_like"><p></p></div>
+            <div class="tempHigh"><p></p></div>
+            <div class="tempLow"><p></p></div>
+          </div>
+          <div class="other">
+            <h2>Other Data Points:</h2>
+            <div class="humidity"><p></p></div>
+            <div class="pressure"><p></p></div>
+            <div class="visibility"><p></p></div>
+            <div class="windSpeed"><p></p></div>
+            <div class="windDirection"><p></p></div>
+          </div>
         </div>
       </div>
     </div>
-    <br /><br /><br />
+    <br /><br /><br /><br />
   </main>
   <script src="weatherApp.js"></script>
   <footer>Created by Matthew Pachapa &copy2022</footer>
