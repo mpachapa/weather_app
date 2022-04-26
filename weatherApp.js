@@ -31,8 +31,47 @@ const weatherApp = {
         document.querySelector(".conditions").innerText = data.weather[0].main;
         document.querySelector(".tempLow").innerText = "Low: " + Math.round(data.main.temp_min) + "°F";
         document.querySelector(".tempHigh").innerText = "High: " + Math.round(data.main.temp_max) + "°F";
-        document.querySelector(".humidity").innerText = Math.round(data.main.humidity) + "% Humidity";
+        document.querySelector(".pressure").innerText = "Pressure: " + (data.main.pressure) + " Milibar"
+        document.querySelector(".humidity").innerText = "Humidity: " + Math.round(data.main.humidity) + "%";
         document.querySelector(".windSpeed").innerText = Math.round(data.wind.speed) + " MPH Winds";
+        document.querySelector(".visibility").innerText = "Visibility: " + (data.visibility)/1000 + " KM";
+        let degree = (data.wind.deg)
+        let cardinal = "";
+        //Converting degree to cardinal direction
+        if (degree >= 348.75 && degree <= 11.25){
+            cardinal = "N";
+        } else if (degree >= 11.25 && degree <= 33.75){
+            cardinal = "NNE";
+        } else if (degree >= 33.75 && degree <= 56.25){
+            cardinal = "NE";
+        } else if (degree >= 56.25 && degree <= 78.75){
+            cardinal = "ENE";
+        } else if (degree >= 78.75 && degree <= 101.25){
+            cardinal = "E";
+        } else if (degree >= 101.25 && degree <= 123.75){
+            cardinal = "ESE";
+        } else if (degree >= 123.75 && degree <= 146.25){
+            cardinal = "SE";
+        } else if (degree >= 146.25 && degree <= 168.75){
+            cardinal = "SSE";
+        } else if (degree >= 168.75 && degree <= 191.25){
+            cardinal = "S";
+        } else if (degree >= 191.25 && degree <= 213.75){
+            cardinal = "SSW";
+        } else if (degree >= 213.75 && degree <= 236.25){
+            cardinal = "SW";
+        } else if (degree >= 236.25 && degree <= 258.75){
+            cardinal = "WSW";
+        } else if (degree >= 258.75 && degree <= 281.25){
+            cardinal = "W";
+        } else if (degree >= 281.25 && degree <= 303.75){
+            cardinal = "WNW";
+        } else if (degree >= 303.75 && degree <= 326.25){
+            cardinal = "NW";
+        } else if (degree >= 236.25 && degree <= 348.75){
+            cardinal = "NNW";
+        } 
+        document.querySelector(".windDirection").innerText = "Wind Direction: " + cardinal + " (" + degree +"\xB0)";
     }
 
 }
@@ -58,4 +97,4 @@ document.querySelector("#button").addEventListener("click", function () {weather
 document.querySelector("#search_bar").addEventListener("keyup", function (event) {if (event.key == "Enter") {weatherApp.searchZip();}})
 
 
-// console.log(weatherApp.getCoordinates(29412))
+console.log(weatherApp.getCoordinates(28209))
