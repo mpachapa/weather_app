@@ -1,28 +1,40 @@
 /* defining elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   padding: 10px;
   text-align: center;
 }
+
 h3 {
   text-align: center;
   size: 30px;
 }
+
 div.search {
   margin: 1em;
   display: flex;
 }
+
 p {
   size: 14px;
   padding: 20px;
 }
+
 div {
   align-items: center;
 }
+
 html,
 body {
   margin: 0;
   height: 100vh;
+  background-color: #43affc;
 }
+
 main {
   display: flex;
   flex-direction: column;
@@ -31,6 +43,7 @@ main {
   margin: 0;
   min-height: 100%;
 }
+
 footer {
   position: fixed;
   right: 0;
@@ -38,6 +51,7 @@ footer {
   padding: 1rem;
   text-align: center;
 }
+
 /* Defining Classes */
 .citydate {
   text-align: center;
@@ -77,6 +91,13 @@ footer {
   padding-top: 20px;
 }
 
+.info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1%;
+}
+
 .buttonContainer {
   display: flex;
   flex-direction: column;
@@ -90,10 +111,6 @@ footer {
   margin-right: 30%;
   margin-left: 30%;
   padding-bottom: 3%;
-  /* border-radius: 2em;
-  border-width: 0.7em;
-  border-style: solid;
-  border-color: white; */
 }
 
 .search {
@@ -109,33 +126,30 @@ footer {
 
 /* Initial Background */
 .pan-top {
-  -webkit-animation: pan-top 60s infinite alternate both;
-  animation: pan-top 60s infinite alternate both;
-}
-
-/* Backgrounds based on the Weather Conditions */
-body.stormy {
-  background: url();
+  -webkit-animation: pan-top 45s infinite alternate both;
+  animation: pan-top 45s infinite alternate both;
 }
 
 /* Initial background animation */
 @-webkit-keyframes pan-top {
   0% {
     background-position: 50% 100%;
-    background-color: #f1faee;
+    background-color: #399ddb;
   }
   100% {
     background-position: 50% 0%;
-    background-color: #457b9d;
+    background-color: #4cb3fd;
   }
 }
 @keyframes pan-top {
   0% {
     background-position: 50% 100%;
-    background-color: #f1faee;
+    background-color: #399ddb;
   }
   100% {
     background-position: 50% 0%;
-    background-color: #457b9d;
+    background-color: #4cb3fd;
   }
 }
+
+/* EOF */
